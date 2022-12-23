@@ -1,13 +1,16 @@
-import pg from "pg";
+import pkg from "pg";
 import dotenv from "dotenv";
 dotenv.config();
 
-const { Pool } = pg;
+const { Pool } = pkg;
 
 export const connectionDB = new Pool({
-    connectionString: process.env.DATABASE_URL,
-    ssl: true,
-})
+    host:"localhost",
+    port: 5432,
+    user:"postgres",
+    password:"root",
+    database:"shortlybank",
+});
 
 /* export const connectionDB = new Pool({
     connectionString: process.env.DATABASE_URL,

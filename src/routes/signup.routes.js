@@ -1,9 +1,9 @@
-import { Router } from "express";
+import express from "express";
 
-import { createNewUser } from '../controllers/signup.controllers.js';
 import { checkNewUser } from '../middlewares/signup.middlewares.js';
+import { createNewUser } from '../controllers/signup.controllers.js';
 
-const router = Router();
+const router = express.Router();
 
 router.post("/signup", checkNewUser, createNewUser);
 

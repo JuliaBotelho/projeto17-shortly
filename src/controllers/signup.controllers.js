@@ -1,5 +1,5 @@
 import bcrypt from "bcrypt";
-import { connectionDB } from "../database/db";
+import { connectionDB } from "../database/db.js";
 
 export async function createNewUser(req, res) {
     const newUser = { ...res.locals.newUser };

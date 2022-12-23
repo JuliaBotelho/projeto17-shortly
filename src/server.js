@@ -9,12 +9,13 @@ import urlsRoutes from "./routes/urls.routes.js"
 import rankingRoutes from "./routes/ranking.routes.js"
 
 dotenv.config();
+
 const app = express();
 app.use(express.json());
-app.use(cors());
+/* app.use(cors()); */
 
-app.use(signinRoutes);
 app.use(signupRoutes);
+app.use(signinRoutes);
 app.use(userRoutes);
 app.use(urlsRoutes);
 app.use(rankingRoutes);
